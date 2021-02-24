@@ -1,7 +1,7 @@
 //Requires
 import express, { static } from 'express';
 const app = express();
-const port = 8082;
+const port = 8081;
 const routes = require('./routes.js');
 
 //Static Routes
