@@ -6,7 +6,7 @@ const routes = require('./routes.js');
 const path = require("path");
 
 //Static Routes
-app.use(express.static(path.join(__dirname, 'build')));
+
 app.use(routes);
 
 //Run Server
