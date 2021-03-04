@@ -6,7 +6,6 @@ const routes = require('./routes.js');
 const path = require("path");
 
 //Static Routes
-
 app.use(routes);
 
 //Run Server

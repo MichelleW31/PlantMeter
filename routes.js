@@ -4,22 +4,22 @@ const path = require("path");
 var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('./database/sensordata.db')
 
-// app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.json());
 
 app.get('/', function (req, res) {
     console.log("get call was made");
-    //figure out why this shit isnt working
-    res.sendFile(path.join(__dirname, "build"));
+    res.sendFile(path.join(__dirname, "build", "index.html"));
 })
 
-// app.get('/plants', function () {
-
-// })
-
 app.post('/plants/:id', function (req, res) {
-    let param = req.params
-    console.log("post call has been made");
+    let param = req.params;
+    let body = req.body;
+    console.log(req);
+    console.log('this is the body', body);
     console.log('this is the param', param);
+
+    res.send("ok");
 })
 
 module.exports = app;
