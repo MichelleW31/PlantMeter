@@ -12,14 +12,14 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, "build", "index.html"));
 })
 
-app.post('/plants/:id', function (req, res) {
-    let id = req.params.id;
-    let body = req.body;
-    let {name, type, moisture, temperature, humidity} = body;
+// app.post('/plants/:id', function (req, res) {
+//     let id = req.params.id;
+//     let body = req.body;
+//     let {name, type, moisture, temperature, humidity} = body;
 
-    db.run('INSERT INTO sensorreadings (id, name, type, moisture, temperature, humidity) VALUES(?, ?, ?, ?, ?, ?)', `[${id}, ${name}, ${type}, ${moisture}, ${temperature}, ${humidity}]`);
+//     db.run('INSERT INTO sensorreadings (id, name, type, moisture, temperature, humidity) VALUES(?, ?, ?, ?, ?, ?)', `[${id}, ${name}, ${type}, ${moisture}, ${temperature}, ${humidity}]`);
 
-    res.send("ok");
-})
+//     res.send("ok");
+// })
 
 module.exports = app;
