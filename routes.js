@@ -13,11 +13,11 @@ app.get('/', function (req, res) {
 })
 
 app.post('/plants/:id', function (req, res) {
-    let param = req.params;
+    let id = req.params.id;
     let body = req.body;
-    console.log(req);
-    console.log('this is the body', body);
-    console.log('this is the param', param);
+    let {name, type, moisture, temperature, humidity} = body;
+
+    db.run('INSERT INTO sensorreadings (id, name, type, moisture, temperature, humidity) VALUES(?, ?, ?, ?, ?, ?)', `[${id}, ${name}, ${type}, ${moisture}, ${temperature}, ${humidity}]`);
 
     res.send("ok");
 })
