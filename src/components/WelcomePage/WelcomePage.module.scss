@@ -1,5 +1,21 @@
-@import "../../_variables.scss";
+// @use "variables" as *;
+@import "../../variables";
 
 .HomePageContainer {
-  font-family: display;
+  display: flex;
+  flex-direction: column;
+  color: $grey;
+  margin-top: $pxToRem(20);
+}
+
+.headerCopy {
+  font-family: $display;
+}
+
+.subHeaderCopy {
+  font-family: $body;
+}
+
+.dripOnline {
+  // width
 }

@@ -7,4 +7,11 @@ $grey3: #6a6261;
 $teal: #0d9eb5;
 $navy: #3a77d2;
 $display: "Courgette";
-$body: "Barlow";
+$body: "Inter";
+
+@function pxToRem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+
+$pxToRem: pxToRem(value);
