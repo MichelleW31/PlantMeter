@@ -4,16 +4,19 @@
 .HomePageContainer {
   display: flex;
   flex-direction: column;
-  color: $grey;
-  margin-top: $pxToRem(20);
+  color: $black;
 }
 
 .headerCopy {
   font-family: $display;
+  font-size: pxtoRem(32);
+  letter-spacing: 1.5px;
+  padding-top: pxToRem(323);
 }
 
 .subHeaderCopy {
-  font-family: $body;
+  // padding-top: pxToRem(323);
+  color: $navy;
 }
 
 .dripOnline {

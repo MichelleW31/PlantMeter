@@ -6,8 +6,8 @@ $grey2: #292929;
 $grey3: #6a6261;
 $teal: #0d9eb5;
 $navy: #3a77d2;
-$display: "Courgette";
-$body: "Inter";
+$display: "Vegan Style Personal Use", sans-serif;
+$body: "Inter", sans-serif;
 
 @function pxToRem($value) {
   $remValue: ($value / 16) + rem;
