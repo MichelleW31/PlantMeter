@@ -11,6 +11,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: pxToRem(100) 0 pxToRem(100) 0;
   text-align: center;
 
   .headerCopy {
@@ -19,7 +20,7 @@
     font-size: pxToRem(64);
     font-weight: 100;
     letter-spacing: 0.8px;
-    padding: pxToRem(323) pxToRem(15) 0 0;
+    padding-right: pxToRem(15);
     width: 90%;
   }
 
@@ -28,12 +29,13 @@
     font-size: pxToRem(25);
     font-style: italic;
     font-weight: 300;
-    padding: pxToRem(10) 0 pxToRem(140);
+    padding-top: pxToRem(10);
   }
 }
 
 .imageContainer {
   display: flex;
+  padding-bottom: pxToRem(75);
   width: 100%;
 
   .dripOnline {
