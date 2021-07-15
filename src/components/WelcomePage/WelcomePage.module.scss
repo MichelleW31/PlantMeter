@@ -40,5 +40,18 @@
 
   .dripOnline {
     width: 100%;
+    animation-name: spin;
+    animation-duration: 1200ms; /* How long lasts 1 turn */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
