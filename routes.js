@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 var sqlite3 = require("sqlite3").verbose();
-var db = new sqlite3.Database("./database/sensordata.db");
+const db = new sqlite3.Database("./database/sensordata.db");
 
 app.use(express.static(path.join(__dirname, "build")));
 app.use(express.json());
@@ -17,11 +17,15 @@ app.get("/plants", function (req, res) {
 });
 
 app.post("/plants/:id", function (req, res) {
-  let param = req.params;
-  let body = req.body;
-  console.log(req);
-  console.log("this is the body", body);
-  console.log("this is the param", param);
+  const { id } = req.params;
+  const { name, type, moisture, temperature, humidity } = req.body;
+
+  console.log("posted");
+
+  db.run(
+    "INSERT INTO sensorreadings(id, name, type, moisture, temparature, humidity) values(?, ?, ?, ?, ?, ?)",
+    (id, name, type, moisture, temperature, humidity)
+  );
 
   res.send("ok");
 });
